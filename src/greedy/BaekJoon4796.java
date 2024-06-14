@@ -10,18 +10,22 @@ public class BaekJoon4796 {
             int L = scanner.nextInt();
             int P = scanner.nextInt();
             int V = scanner.nextInt();
+            scanner.nextLine();
 
-            if(L == 0 && P == 0 && V == 0) break;
-
-            int a = V / P;
-            int b = L * a;
-            int c = V - P * a > 0 ? V - P * a : 0;
+            if(L == 0 && P == 0 && V == 0) {
+                scanner.close();
+                break;
+            }
 
             i++;
-            System.out.println("Case " + i + ": " + (b + c));
+            int answer = 0;
 
+            if(V % P > L) {
+                answer = (L * (V / P)) + L;
+            } else {
+                answer = (L * (V / P)) + (V % P);
+            }
+            System.out.println("Case " + i + ": " + answer);
         }
-
-        scanner.close();
     }
 }
