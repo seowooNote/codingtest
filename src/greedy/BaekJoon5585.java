@@ -6,7 +6,6 @@ public class BaekJoon5585 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int M = 1000 - scanner.nextInt();
-
         int A = M / 500;
         M %= 500;
         int B = M / 100;
